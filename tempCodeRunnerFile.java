@@ -1,0 +1,1 @@
+ System.out.println("Parent gene has swimming");
