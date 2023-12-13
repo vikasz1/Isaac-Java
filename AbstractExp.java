@@ -1,27 +1,31 @@
 public class AbstractExp {
     public static void main(String[] args) {
-        House myHouse = new House(5,1) {
-            public void makeFood() {
-                System.out.println("pizza");
+        House isaacHouse = new House(10, 4) {
+            public void kitchen() {
+                System.out.println("I want open kitchen");
             }
         };
-        House yourHouse = new House(10,5) {
-            public void makeFood(){
-                System.out.println("Chicken");
+        House vikasHouse = new House(10,4) {
+            public void kitchen(){
+                System.out.println("I want close kitchen.");
             }
         };
-        myHouse.makeFood();
-        yourHouse.makeFood();
+
+        isaacHouse.kitchen();
+        vikasHouse.kitchen();
     }
 }
 
 abstract class House {
     int rooms;
-    int floors=2;
-    int windows=10;
-    House(int givenRoom,int givenFloor){
+    int floors;
+    int windows;
+
+    // constructor
+    House(int givenRoom, int givenFloor) {
         this.rooms = givenRoom;
-        this.floors= givenFloor;
+        this.floors = givenFloor;
     }
-    abstract public void makeFood();
+
+    abstract public void kitchen();
 }

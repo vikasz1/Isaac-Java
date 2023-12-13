@@ -1,16 +1,13 @@
-import java.time.LocalDate;
-import java.time.LocalDateTime;
-import java.time.LocalTime;
-import java.time.format.DateTimeFormatter;
+import java.util.Scanner;
 
-public class Main
-{
-    public static void main(String args[]){
-        // Date and Time
-        LocalDateTime objDate = LocalDateTime.now();
-        DateTimeFormatter isaac = DateTimeFormatter.ofPattern("HH:mm");
-
-        String result = isaac.format(objDate);
-        System.out.println(result);
+public class Main {
+    public static void main(String[] args) {
+        String s;
+        Scanner sc = new Scanner(System.in);
+        System.out.print("Enter a String: ");
+        s = sc.nextLine();
+        for (int i = s.length() - 1; i >= 0; i--) {
+            System.out.print(s.charAt(i));
+        }
     }
 }

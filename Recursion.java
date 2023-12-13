@@ -1,15 +1,22 @@
 public class Recursion {
     public static void main(String[] args) {
-        System.out.println(args[0]);
-        beautiful(5,4);
-    }
-    //exponents 3*3*3*3 = 
-    public static void beautiful(int a,int b){
-        // 5^4 
-        int result = 1;
-        for (int i = 0; i < b; i++) {
-            result = result * a;
-        }
+        flower(1);
+        int result = factorial(5);
         System.out.println(result);
     }
+    public static void flower(int n){
+
+        if (n==0) return;
+        System.out.println(n);
+        flower(n-1);
+    }
+
+    public static int factorial(int n){
+        if (n==0) return 1;
+        return n*factorial(n-1);
+    }
+    // Factorial
+    // 5! = 5*4*3*2*1 = 120
+    // 4! = 4*3*2*1 = 24
+
 }
